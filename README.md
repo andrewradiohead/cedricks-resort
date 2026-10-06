@@ -12,12 +12,12 @@ git init
 git add .
 git commit -m "Add Cedrick's Resort website"
 git branch -M main
-git remote add origin https://github.com/YOUR-USERNAME/cedricks-resort.git
+git remote add origin https://github.com/andrewradiohead/cedricks-resort.git
 git push -u origin main
 ```
 
 3. On GitHub: Settings > Pages > Source: "Deploy from a branch" > Branch `main`, folder `/ (root)` > Save.
-4. After about a minute the site is live at `https://YOUR-USERNAME.github.io/cedricks-resort/`.
+4. After about a minute the site is live at `https://andrewradiohead.github.io/cedricks-resort/`.
 5. Paste that URL into any QR generator (for example qr-code-generator.com or Canva) and upload the QR image to Google Classroom.
 
 ## Add your photos

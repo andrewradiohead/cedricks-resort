@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cedrick's Resort | Beachfront Stay in Puerto Galera, Oriental Mindoro</title>
+<meta name="description" content="Cedrick's Resort is a 24-room beachfront resort in Oriental Mindoro offering sea-view rooms, island tours, diving and Mindoro cuisine. Plan your stay and send an inquiry online.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌴</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0b2a30;--lagoon:#14575f;--sea:#2d8a8a;--mist:#eaf1ee;--paper:#f8faf9;--brass:#a9823a;--brass-d:#7d5e22;--text:#1c3237;--muted:#4d6468;--line:#d3dfdb}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:Figtree,system-ui,sans-serif;color:var(--text);background:var(--paper);line-height:1.65;font-size:17px}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.1;color:var(--ink)}
+h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:.6rem}
+h3{font-size:1.5rem;margin-bottom:.3rem}
+a{color:var(--lagoon)}
+:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+section{padding:88px 0}
+.lead{max-width:62ch;color:var(--muted);margin-bottom:2.2rem}
+.btn{display:inline-block;background:var(--brass);color:#fff;padding:14px 30px;text-decoration:none;font-weight:600;border:0;cursor:pointer;font:inherit;font-weight:600;border-radius:2px}
+.btn:hover{background:var(--brass-d)}
+.btn.ghost{background:transparent;border:1.5px solid #fff;margin-left:10px}
+.btn.ghost:hover{background:#ffffff22}
+/* nav */
+header{position:sticky;top:0;z-index:20;background:var(--ink);border-bottom:2px solid var(--brass)}
+nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff;font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:600}
+.logo svg{width:34px;height:34px}
+nav ul{display:flex;gap:22px;list-style:none;padding:0}
+nav ul a{color:#cfe0dc;text-decoration:none;font-size:.95rem}
+nav ul a:hover{color:#fff}
+#menu{display:none;background:none;border:1.5px solid #cfe0dc;color:#fff;padding:6px 12px;font:inherit}
+/* hero */
+.hero{background:linear-gradient(180deg,var(--ink) 0%,var(--lagoon) 70%,var(--sea) 100%);color:#fff;padding:96px 0 0;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:end}
+.hero h1{color:#fff;font-size:clamp(2.8rem,6.4vw,5.4rem);letter-spacing:-.01em}
+.hero p{max-width:52ch;margin:1.4rem 0 2rem;color:#d9e8e4;font-size:1.12rem}
+.tide{background:#ffffff12;border:1px solid #ffffff30;padding:22px 24px;margin-bottom:56px}
+.tide h3{color:#fff;font-size:1.25rem;margin-bottom:.6rem}
+.tide dl{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;font-size:.95rem;color:#d9e8e4}
+.tide dt{color:#e6c987;font-weight:600}
+.tide dd{margin:0}
+.waves{display:block;width:100%;height:70px;margin-top:-1px}
+/* about */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.facts{display:grid;gap:0;border-left:3px solid var(--brass);padding-left:26px}
+.facts p{padding:12px 0;border-bottom:1px solid var(--line)}
+.facts p:last-child{border:0}
+.facts b{color:var(--ink)}
+.mv{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:2rem}
+.mv div{background:var(--mist);padding:20px}
+/* rooms */
+.alt{background:var(--mist)}
+.rooms{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.room{background:#fff;border-top:4px solid var(--brass);display:flex;flex-direction:column}
+.pic{height:190px;background:linear-gradient(135deg,var(--lagoon),var(--sea));background-size:cover;background-position:center}
+.room .in{padding:24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.price{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:600;color:var(--brass-d)}
+.price small{font-family:Figtree;font-size:.85rem;color:var(--muted);font-weight:400}
+ul.tick{list-style:none;padding:0;font-size:.95rem}
+ul.tick li{padding-left:22px;position:relative;margin:3px 0}
+ul.tick li:before{content:"";position:absolute;left:2px;top:.55em;width:9px;height:5px;border-left:2px solid var(--sea);border-bottom:2px solid var(--sea);transform:rotate(-45deg)}
+.room .btn{margin-top:auto;text-align:center}
+/* packages */
+.pk{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.pkg{border:1px solid var(--line);background:#fff;padding:28px}
+.pkg.best{background:var(--ink);color:#d9e8e4;border-color:var(--ink)}
+.pkg.best h3,.pkg.best .price{color:#fff}
+.pkg.best .price small,.pkg.best .meta{color:#aac3bf}
+.meta{color:var(--muted);font-size:.9rem;margin-bottom:.8rem}
+.pkg h4{font-size:.95rem;margin:14px 0 4px}
+.pkg ol{padding-left:18px;font-size:.93rem}
+.pkg .btn{margin-top:18px}
+.promo{margin-top:36px;padding:20px 26px;border:1.5px dashed var(--brass);background:#fff;display:flex;gap:16px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:170px;gap:12px}
+.gal figure{position:relative;background:linear-gradient(135deg,var(--lagoon),var(--sea));background-size:cover;background-position:center;overflow:hidden}
+.gal figure:nth-child(1),.gal figure:nth-child(6){grid-column:span 2;grid-row:span 2}
+.gal figcaption{position:absolute;inset:auto 0 0;padding:26px 14px 10px;color:#fff;font-size:.88rem;background:linear-gradient(transparent,#0b2a30dd)}
+.credit{font-size:.85rem;color:var(--muted);margin-top:14px}
+/* destination */
+.dest{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.map{border:0;width:100%;min-height:340px;margin-top:16px;border:1px solid var(--line)}
+table{width:100%;border-collapse:collapse;font-size:.95rem;margin:10px 0 24px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line)}
+th{color:var(--ink);background:var(--mist)}
+.tw{overflow-x:auto}
+/* travel info */
+.info{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);background:#fff}
+.info div{padding:24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.info h3{font-size:1.25rem}
+.info p,.info li{font-size:.95rem}
+.info ul{padding-left:18px}
+/* reviews, faq */
+.rev{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+blockquote{background:#fff;padding:26px;border-left:4px solid var(--brass)}
+blockquote cite{display:block;margin-top:12px;font-style:normal;font-size:.9rem;color:var(--muted)}
+.stars{color:var(--brass);letter-spacing:2px}
+details{border-bottom:1px solid var(--line);padding:16px 0;max-width:780px}
+summary{cursor:pointer;font-weight:600;color:var(--ink)}
+details p{margin-top:8px;color:var(--muted)}
+/* booking */
+.book{background:var(--ink);color:#d9e8e4}
+.book h2{color:#fff}
+.book .lead{color:#aac3bf}
+form{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:820px}
+label{display:grid;gap:5px;font-size:.92rem;font-weight:500}
+input,select,textarea{font:inherit;padding:11px 12px;border:1px solid #6b8c8c;background:#fff;color:var(--text);border-radius:2px;width:100%}
+.full{grid-column:1/-1}
+#ok{display:none;margin-top:20px;padding:18px;background:#1f6d62;color:#fff;max-width:820px}
+.note{font-size:.85rem;color:#aac3bf}
+/* contact + footer */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.contact p{margin:6px 0}
+footer{background:#071b1f;color:#9db6b3;padding:56px 0 28px;font-size:.92rem}
+.fg{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px}
+footer h3{color:#fff;font-size:1.2rem}
+footer a{color:#cfe0dc;display:block;margin:4px 0}
+.fine{border-top:1px solid #ffffff20;margin-top:32px;padding-top:18px;font-size:.82rem}
+@media(max-width:900px){
+ section{padding:64px 0}
+ #menu{display:block}
+ nav ul{display:none;position:absolute;top:68px;left:0;right:0;background:var(--ink);flex-direction:column;padding:16px 24px;gap:14px}
+ nav ul.open{display:flex}
+ .hero-grid,.about,.dest,.contact,.fg{grid-template-columns:1fr}
+ .rooms,.pk,.rev,.info{grid-template-columns:1fr}
+ .gal{grid-template-columns:repeat(2,1fr)}
+ form,.mv{grid-template-columns:1fr}
+ .btn.ghost{margin:10px 0 0}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav aria-label="Main">
+ <a class="logo" href="#home" aria-label="Cedrick's Resort, home">
+  <svg viewBox="0 0 40 40" fill="none" stroke="#c9a14f" stroke-width="2"><circle cx="20" cy="20" r="18"/><path d="M8 26c4-3 8-3 12 0s8 3 12 0M8 31c4-3 8-3 12 0s8 3 12 0M20 24V11M20 11c-5 0-8 2-9 5M20 11c5 0 8 2 9 5M20 11c-3-3-6-3-8-2M20 11c3-3 6-3 8-2"/></svg>
+  Cedrick's Resort</a>
+ <button id="menu" aria-expanded="false" aria-controls="links">Menu</button>
+ <ul id="links">
+  <li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#rooms">Rooms &amp; Services</a></li>
+  <li><a href="#packages">Packages</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#destination">Getting Here</a></li>
+  <li><a href="#guide">Travel Guide</a></li><li><a href="#booking">Book</a></li><li><a href="#contact">Contact</a></li>
+ </ul></nav></div></header>
+
+<main>
+<section class="hero" id="home" style="padding-bottom:0">
+ <div class="wrap hero-grid">
+  <div>
+   <h1>Wake up to the tide, not an alarm.</h1>
+   <p>Cedrick's Resort is a 24-room beachfront retreat in Oriental Mindoro, built for couples, families and divers who want quiet mornings, fresh seafood and a short boat ride to the island's best reefs.</p>
+   <a class="btn" href="#booking">Plan your stay</a><a class="btn ghost" href="#packages">View packages</a>
+  </div>
+  <aside class="tide" aria-label="At a glance">
+   <h3>At a glance</h3>
+   <dl><dt>Rooms</dt><dd>24, from ₱3,800 a night</dd><dt>Beach</dt><dd>40 m from every room</dd><dt>Check-in</dt><dd>2:00 PM; check-out 11:00 AM</dd><dt>Best months</dt><dd>November to May</dd><dt>Reply time</dt><dd>Within 24 hours</dd></dl>
+  </aside>
+ </div>
+ <svg class="waves" viewBox="0 0 1200 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 35c150-40 300 40 450 0s300-40 450 0 200 30 300 10v25H0z" fill="#f8faf9"/></svg>
+</section>
+
+<section id="about"><div class="wrap about">
+ <div>
+  <h2>A family-run resort on a quiet cove</h2>
+  <p class="lead">Cedrick's Resort opened in 2012 as six bamboo-and-nipa cottages built by the Cedrick family on land they had fished from for three generations. Today it has 24 rooms, an open-air restaurant and a small dive shop, and it is still managed by the family.</p>
+  <p>We sit within reach of the marine reserves and white-sand beaches that make Puerto Galera a UNESCO Man and Biosphere Reserve. Guests choose us for calm water, honest prices and staff who know the coast by name.</p>
+  <div class="mv"><div><h3>Mission</h3><p>Give every guest a restful, safe and memorable coastal stay while protecting the reef that sustains our community.</p></div>
+  <div><h3>Vision</h3><p>The most trusted family resort in Oriental Mindoro, known for sincere hospitality and responsible tourism.</p></div></div>
+ </div>
+ <div class="facts">
+  <p><b>Location.</b> Sabang–Balatero coastal road, Puerto Galera, Oriental Mindoro (fictional address for academic use).</p>
+  <p><b>Target market.</b> Couples, families, small barkadas, and certified or beginner divers from Metro Manila, Batangas and abroad.</p>
+  <p><b>What sets us apart.</b> Sea-view rooms at mid-range prices, in-house dive shop, local-staffed island tours and a refill-only plastic policy.</p>
+  <p><b>Tourism value.</b> We source seafood and produce from nearby fisherfolk and farms, and about 90% of our team lives within 5 km of the resort.</p>
+ </div>
+</div></section>
+
+<section id="rooms" class="alt"><div class="wrap">
+ <h2>Rooms and services</h2>
+ <p class="lead">Every room has air conditioning, hot shower, Wi-Fi in common areas and breakfast for two. Rates are per room per night and include taxes.</p>
+ <div class="rooms">
+  <article class="room"><div class="pic" style="background-image:url(images/room-garden.jpg),linear-gradient(135deg,#14575f,#2d8a8a)"></div><div class="in">
+   <h3>Garden Cottage</h3><p>Nipa-roofed cottage under coconut palms, a short walk from the shore.</p>
+   <ul class="tick"><li>Queen bed, sleeps 2</li><li>Private veranda</li><li>Breakfast for 2</li></ul>
+   <div class="price">₱3,800 <small>per night</small></div><a class="btn" href="#booking" data-room="Garden Cottage">Inquire about this room</a></div></article>
+  <article class="room"><div class="pic" style="background-image:url(images/room-seaview.jpg),linear-gradient(135deg,#0b2a30,#2d8a8a)"></div><div class="in">
+   <h3>Seaview Deluxe</h3><p>Second-floor room with a balcony facing the bay and the sunrise.</p>
+   <ul class="tick"><li>King or two doubles, sleeps 3</li><li>Balcony with daybed</li><li>Breakfast for 3</li></ul>
+   <div class="price">₱5,500 <small>per night</small></div><a class="btn" href="#booking" data-room="Seaview Deluxe">Inquire about this room</a></div></article>
+  <article class="room"><div class="pic" style="background-image:url(images/room-family.jpg),linear-gradient(135deg,#14575f,#a9823a)"></div><div class="in">
+   <h3>Family Beach Villa</h3><p>Two-bedroom villa with a kitchenette and direct path to the sand.</p>
+   <ul class="tick"><li>Two bedrooms, sleeps 6</li><li>Kitchenette and dining nook</li><li>Breakfast for 6</li></ul>
+   <div class="price">₱9,200 <small>per night</small></div><a class="btn" href="#booking" data-room="Family Beach Villa">Inquire about this room</a></div></article>
+ </div>
+ <div class="tw"><table style="margin-top:36px;background:#fff"><caption style="text-align:left;font-weight:600;padding:8px 10px">Other services</caption>
+  <tr><th>Service</th><th>Details</th><th>Rate</th><th>Availability</th></tr>
+  <tr><td>Island-hopping boat</td><td>3 stops, snorkel gear, packed lunch; 4 hours</td><td>₱3,500 per boat (up to 6)</td><td>Daily, weather permitting</td></tr>
+  <tr><td>Intro scuba dive</td><td>Pool briefing, 1 guided dive, certified instructor; 3 hours</td><td>₱2,800 per person</td><td>8:00 AM and 1:00 PM</td></tr>
+  <tr><td>Sunset dinner on the sand</td><td>Four-course seafood set, table by the shore</td><td>₱1,600 per person</td><td>Book one day ahead</td></tr>
+  <tr><td>Airport and port transfer</td><td>Aircon van from Batangas Pier or Calapan Port</td><td>₱2,500 per van</td><td>Daily, advance booking</td></tr></table></div>
+</div></section>
+
+<section id="packages"><div class="wrap">
+ <h2>Tour packages</h2>
+ <p class="lead">Prices are estimates per person on twin sharing, valid for 2026 and subject to change. Send an inquiry to confirm dates.</p>
+ <div class="pk">
+  <article class="pkg"><h3>Quick Escape</h3><p class="meta">2 days, 1 night. For couples and first-timers.</p>
+   <div class="price">₱4,900 <small>per person</small></div>
+   <h4>Inclusions</h4><ul class="tick"><li>Garden Cottage, breakfast</li><li>Island-hopping (3 stops)</li><li>Sunset drinks</li></ul>
+   <h4>Exclusions</h4><p style="font-size:.93rem">Transport to the resort, lunch and dinner on Day 1, personal expenses.</p>
+   <h4>Sample itinerary</h4><ol><li>Check in, lunch, beach time, sunset drinks</li><li>Breakfast, island-hopping, check-out</li></ol>
+   <a class="btn" href="#booking" data-room="Quick Escape package">Inquire now</a></article>
+  <article class="pkg best"><h3>Reef and Relax</h3><p class="meta">3 days, 2 nights. For divers and active travelers.</p>
+   <div class="price">₱9,800 <small>per person</small></div>
+   <h4>Inclusions</h4><ul class="tick"><li>Seaview Deluxe, daily breakfast</li><li>2 guided dives or snorkel tours</li><li>Sunset dinner on the sand</li><li>Port transfers</li></ul>
+   <h4>Exclusions</h4><p style="font-size:.93rem">Dive certification fees, lunches, travel insurance.</p>
+   <h4>Sample itinerary</h4><ol><li>Transfer in, beach orientation, dinner</li><li>Morning dives, free afternoon, sunset dinner</li><li>Snorkel at the reserve, check-out</li></ol>
+   <a class="btn" href="#booking" data-room="Reef and Relax package">Inquire now</a></article>
+  <article class="pkg"><h3>Family Barkada Week</h3><p class="meta">4 days, 3 nights. For families and groups of 6.</p>
+   <div class="price">₱7,400 <small>per person</small></div>
+   <h4>Inclusions</h4><ul class="tick"><li>Family Beach Villa, breakfast</li><li>Island-hopping boat for the group</li><li>Kids' sandcastle and fishing activity</li></ul>
+   <h4>Exclusions</h4><p style="font-size:.93rem">Transport, other meals, optional dive add-ons.</p>
+   <h4>Sample itinerary</h4><ol><li>Arrive, swim, family dinner</li><li>Island-hopping and picnic lunch</li><li>Village tour and cooking demo</li><li>Breakfast, check-out</li></ol>
+   <a class="btn" href="#booking" data-room="Family Barkada Week package">Inquire now</a></article>
+ </div>
+ <div class="promo"><div><h3>Early-booker offer</h3><p>Book 30 days ahead and get a free sunset dinner for two. Use code <b>EARLYTIDE</b> in the inquiry form.</p></div><a class="btn" href="#booking">Use this offer</a></div>
+</div></section>
+
+<section id="gallery" class="alt"><div class="wrap">
+ <h2>Gallery</h2>
+ <p class="lead">A look at the beach, rooms, food and reefs you will find at Cedrick's.</p>
+ <div class="gal">
+  <figure style="background-image:url(images/gallery-1.jpg),linear-gradient(135deg,#0b2a30,#2d8a8a)"><figcaption>Sunrise over the bay from the main beach</figcaption></figure>
+  <figure style="background-image:url(images/gallery-2.jpg),linear-gradient(135deg,#14575f,#7fb9b0)"><figcaption>Seaview Deluxe balcony</figcaption></figure>
+  <figure style="background-image:url(images/gallery-3.jpg),linear-gradient(135deg,#2d8a8a,#0b2a30)"><figcaption>Garden Cottage veranda</figcaption></figure>
+  <figure style="background-image:url(images/gallery-4.jpg),linear-gradient(135deg,#a9823a,#14575f)"><figcaption>Grilled catch of the day</figcaption></figure>
+  <figure style="background-image:url(images/gallery-5.jpg),linear-gradient(135deg,#14575f,#a9823a)"><figcaption>Sunset dinner on the sand</figcaption></figure>
+  <figure style="background-image:url(images/gallery-6.jpg),linear-gradient(135deg,#0b2a30,#14575f)"><figcaption>Island-hopping boat at the lagoon</figcaption></figure>
+  <figure style="background-image:url(images/gallery-7.jpg),linear-gradient(135deg,#2d8a8a,#a9823a)"><figcaption>Snorkeling over coral gardens</figcaption></figure>
+  <figure style="background-image:url(images/gallery-8.jpg),linear-gradient(135deg,#7fb9b0,#14575f)"><figcaption>Open-air restaurant</figcaption></figure>
+ </div>
+ <p class="credit">Photo credits: add your own photos in the <code>images</code> folder, named gallery-1.jpg to gallery-8.jpg, or credit the photographer and license here.</p>
+</div></section>
+
+<section id="destination"><div class="wrap dest">
+ <div>
+  <h2>Getting to Cedrick's</h2>
+  <p class="lead">We are about 130 km south of Manila by road and sea, roughly 4 to 5 hours door to door.</p>
+  <div class="tw"><table>
+   <tr><th>From</th><th>Route</th><th>Time</th></tr>
+   <tr><td>Manila</td><td>Bus or van to Batangas Pier, then ferry to Balatero or Muelle Pier</td><td>4 to 5 hours</td></tr>
+   <tr><td>Calapan City</td><td>Van or jeepney along the coastal road</td><td>2.5 to 3 hours</td></tr>
+   <tr><td>Resort pickup</td><td>Aircon van or tricycle from the pier</td><td>15 to 25 minutes</td></tr></table></div>
+  <h3>Nearby attractions</h3>
+  <ul class="tick"><li>White Beach and Sabang for dining and nightlife</li><li>Tamaraw Falls and Ponderosa viewpoint</li><li>Mangyan cultural village visit</li><li>Coral gardens and marine reserve</li></ul>
+  <h3 style="margin-top:14px">Eating and staying nearby</h3>
+  <p>Our restaurant serves breakfast to dinner. Local eateries and a minimart are within a 10-minute tricycle ride. Overflow rooms are available at partner inns during peak season.</p>
+ </div>
+ <div>
+  <h3>Find us on the map</h3>
+  <iframe class="map" title="Map of Puerto Galera, Oriental Mindoro" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=120.88%2C13.47%2C121.05%2C13.55&amp;layer=mapnik&amp;marker=13.5105%2C120.9530"></iframe>
+  <p class="credit">Map data © OpenStreetMap contributors. Pin shows the general Puerto Galera area.</p>
+ </div>
+</div></section>
+
+<section id="guide" class="alt"><div class="wrap">
+ <h2>Travel guide</h2>
+ <p class="lead">Everything worth knowing before you pack.</p>
+ <div class="info">
+  <div><h3>Best time to visit</h3><p>November to May is dry with calm seas. June to October is wetter and rougher; boat tours may be cancelled for safety.</p></div>
+  <div><h3>What to bring</h3><ul><li>Reef-safe sunscreen</li><li>Swimwear, light cotton clothes, a light jacket</li><li>Refillable bottle, cash for local shops</li></ul></div>
+  <div><h3>Estimated budget</h3><p>About ₱3,500 to ₱6,000 per person per day, including room share, meals and one activity.</p></div>
+  <div><h3>Safety</h3><ul><li>Swim only in marked areas</li><li>Wear life vests on all boat trips</li><li>Do not dive within 18 hours of flying</li></ul></div>
+  <div><h3>Local customs and etiquette</h3><p>Greet staff and villagers with a smile and "po" or "opo". Ask before photographing people. Cover up when leaving the beach area.</p></div>
+  <div><h3>Environment</h3><p>Do not touch or stand on coral. Take trash back to shore. We use refill stations, not single-use bottles.</p></div>
+  <div><h3>Accessibility</h3><p>Garden Cottages and the restaurant have step-free paths. Tell us your needs and we will prepare a ground-floor room.</p></div>
+  <div><h3>Emergency information</h3><p>Resort front desk: +63 917 555 0142 (24 hours). Emergency hotline: 911. Nearest health center: Puerto Galera Municipal Health Office.</p></div>
+  <div><h3>Dress code</h3><p>Beachwear is fine on the sand. Smart casual is appreciated at dinner. Shirts are required in the restaurant.</p></div>
+ </div>
+</div></section>
+
+<section id="reviews"><div class="wrap">
+ <h2>What guests say</h2>
+ <p class="lead">Sample guest comments for this academic project.</p>
+ <div class="rev">
+  <blockquote><span class="stars" aria-label="5 out of 5">★★★★★</span><p>Quiet beach, clean rooms and a very kind team. The sunset dinner was the highlight of our anniversary.</p><cite>Maria and Paolo, Quezon City</cite></blockquote>
+  <blockquote><span class="stars" aria-label="5 out of 5">★★★★★</span><p>Our kids loved the boat trip and the staff watched them like family. Great value for a villa this size.</p><cite>The Reyes family, Batangas</cite></blockquote>
+  <blockquote><span class="stars" aria-label="4 out of 5">★★★★☆</span><p>Professional dive instructors and well-kept gear. Wi-Fi is limited to common areas, which suited us fine.</p><cite>Daniel K., Singapore</cite></blockquote>
+ </div>
+ <h2 style="margin-top:56px">Frequently asked questions</h2>
+ <details><summary>How do I confirm a booking?</summary><p>Send the inquiry form. We reply within 24 hours with availability and payment instructions. A 30% deposit holds your dates.</p></details>
+ <details><summary>What is your cancellation policy?</summary><p>Free cancellation up to 7 days before arrival. Later cancellations forfeit the deposit.</p></details>
+ <details><summary>Do you accept children and pets?</summary><p>Children are welcome. Pets are not allowed inside rooms, but service animals are accepted.</p></details>
+ <details><summary>What happens if the weather cancels my tour?</summary><p>We reschedule at no cost or refund the activity fee.</p></details>
+</div></section>
+
+<section id="booking" class="book"><div class="wrap">
+ <h2>Book or send an inquiry</h2>
+ <p class="lead">Tell us when you plan to visit. We only ask for what we need to prepare your quote. Do not enter payment or ID details here.</p>
+ <form id="inq">
+  <label>Full name<input name="name" required autocomplete="name"></label>
+  <label>Email<input type="email" name="email" required autocomplete="email"></label>
+  <label>Check-in date<input type="date" name="in" required></label>
+  <label>Check-out date<input type="date" name="out" required></label>
+  <label>Adults<input type="number" name="adults" min="1" max="12" value="2" required></label>
+  <label>Children<input type="number" name="kids" min="0" max="10" value="0"></label>
+  <label class="full">Room or package<select name="room" id="room">
+   <option>Garden Cottage</option><option>Seaview Deluxe</option><option>Family Beach Villa</option>
+   <option>Quick Escape package</option><option>Reef and Relax package</option><option>Family Barkada Week package</option></select></label>
+  <label class="full">Special requests or promo code<textarea name="msg" rows="3"></textarea></label>
+  <div class="full"><button class="btn" type="submit">Send inquiry</button></div>
+ </form>
+ <div id="ok" role="status"></div>
+ <p class="note" style="margin-top:16px">Your inquiry opens in your email app addressed to the resort. This is a fictional business for a class project.</p>
+</div></section>
+
+<section id="contact"><div class="wrap contact">
+ <div>
+  <h2>Contact us</h2>
+  <p class="lead">Questions before you book? Reach the front desk through any channel below.</p>
+  <p><b>Cedrick's Resort</b></p>
+  <p>Sabang–Balatero Road, Puerto Galera, Oriental Mindoro 5203</p>
+  <p>Phone: <a href="tel:+639175550142">+63 917 555 0142</a></p>
+  <p>Email: <a href="mailto:stay@cedricksresort.example">stay@cedricksresort.example</a></p>
+  <p>Front desk hours: 6:00 AM to 10:00 PM daily</p>
+  <p>Follow us: <a href="https://facebook.com" rel="noopener">Facebook</a> · <a href="https://instagram.com" rel="noopener">Instagram</a> · <a href="https://tiktok.com" rel="noopener">TikTok</a></p>
+ </div>
+ <div>
+  <h3>Send a quick message</h3>
+  <form id="msgform" style="grid-template-columns:1fr;margin-top:12px">
+   <label>Name<input id="cn" required></label>
+   <label>Email<input id="ce" type="email" required></label>
+   <label>Message<textarea id="cm" rows="4" required></textarea></label>
+   <div><button class="btn" type="submit">Send message</button></div>
+  </form>
+ </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+ <div class="fg">
+  <div><h3>Cedrick's Resort</h3><p>Beachfront stays, island tours and diving in Puerto Galera, Oriental Mindoro.</p><p>stay@cedricksresort.example<br>+63 917 555 0142</p></div>
+  <div><h3>Explore</h3><a href="#home">Home</a><a href="#rooms">Rooms &amp; Services</a><a href="#packages">Packages</a><a href="#gallery">Gallery</a><a href="#guide">Travel guide</a><a href="#booking">Book now</a></div>
+  <div><h3>Follow</h3><a href="https://facebook.com" rel="noopener">Facebook</a><a href="https://instagram.com" rel="noopener">Instagram</a><a href="https://tiktok.com" rel="noopener">TikTok</a></div>
+ </div>
+ <p class="fine">© 2026 Cedrick's Resort. Fictional business created for the Applied Business Tools and Technologies in Tourism final examination. Privacy: details sent through the forms are used only to answer your inquiry. Map data © OpenStreetMap contributors.</p>
+</div></footer>
+
+<script>
+const menu=document.getElementById('menu'),links=document.getElementById('links');
+menu.addEventListener('click',()=>{const o=links.classList.toggle('open');menu.setAttribute('aria-expanded',o)});
+links.addEventListener('click',()=>{links.classList.remove('open');menu.setAttribute('aria-expanded',false)});
+document.querySelectorAll('[data-room]').forEach(a=>a.addEventListener('click',()=>{document.getElementById('room').value=a.dataset.room}));
+const today=new Date().toISOString().split('T')[0];
+document.querySelectorAll('input[type=date]').forEach(d=>d.min=today);
+const MAIL='stay@cedricksresort.example';
+document.getElementById('inq').addEventListener('submit',e=>{
+ e.preventDefault();const f=new FormData(e.target);
+ if(f.get('out')<=f.get('in')){alert('Check-out must be after check-in.');return}
+ const body=`Name: ${f.get('name')}\nEmail: ${f.get('email')}\nCheck-in: ${f.get('in')}\nCheck-out: ${f.get('out')}\nAdults: ${f.get('adults')}, Children: ${f.get('kids')}\nChoice: ${f.get('room')}\nNotes: ${f.get('msg')}`;
+ const ok=document.getElementById('ok');
+ ok.style.display='block';ok.textContent=`Thank you, ${f.get('name')}. Your inquiry for ${f.get('room')} is ready. If your email app did not open, write to ${MAIL}.`;
+ location.href=`mailto:${MAIL}?subject=${encodeURIComponent('Booking inquiry: '+f.get('room'))}&body=${encodeURIComponent(body)}`;
+});
+document.getElementById('msgform').addEventListener('submit',e=>{
+ e.preventDefault();
+ location.href=`mailto:${MAIL}?subject=${encodeURIComponent('Message from '+cn.value)}&body=${encodeURIComponent(cm.value+'\n\nReply to: '+ce.value)}`;
+});
+</script>
+</body>
+</html>

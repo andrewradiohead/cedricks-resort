@@ -35,7 +35,7 @@ nav ul a{color:#cfe0dc;text-decoration:none;font-size:.95rem}
 nav ul a:hover{color:#fff}
 #menu{display:none;background:none;border:1.5px solid #cfe0dc;color:#fff;padding:6px 12px;font:inherit}
 /* hero */
-.hero{background:linear-gradient(180deg,var(--ink) 0%,var(--lagoon) 70%,var(--sea) 100%);color:#fff;padding:96px 0 0;position:relative;overflow:hidden}
+.hero{background:linear-gradient(180deg,rgba(11,42,48,.88) 0%,rgba(20,87,95,.62) 65%,rgba(45,138,138,.45) 100%),url(Gallery/hero.jpg),linear-gradient(180deg,var(--ink),var(--sea));background-size:cover;background-position:center;color:#fff;padding:96px 0 0;position:relative;overflow:hidden}
 .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:end}
 .hero h1{color:#fff;font-size:clamp(2.8rem,6.4vw,5.4rem);letter-spacing:-.01em}
 .hero p{max-width:52ch;margin:1.4rem 0 2rem;color:#d9e8e4;font-size:1.12rem}
@@ -133,6 +133,57 @@ footer a{color:#cfe0dc;display:block;margin:4px 0}
  .btn.ghost{margin:10px 0 0}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* motion */
+.hero>*{position:relative;z-index:1}
+.hero::before{content:"";position:absolute;inset:-4%;z-index:0;background:url(Gallery/hero.jpg) center/cover;opacity:.4;animation:kb 26s ease-in-out infinite alternate}
+.hero::after{content:"";position:absolute;inset:0;z-index:0;background:radial-gradient(circle at 20% 30%,#e6c98744,transparent 40%),radial-gradient(circle at 80% 60%,#7fd0c733,transparent 45%);animation:drift 16s ease-in-out infinite alternate}
+@keyframes kb{to{transform:scale(1.1) translate(-1.5%,1%)}}
+@keyframes drift{to{transform:translate(4%,-3%) scale(1.15)}}
+@keyframes up{from{opacity:0;transform:translateY(34px)}to{opacity:1;transform:none}}
+@keyframes bob{50%{transform:translateY(-8px)}}
+.hero h1{animation:up 1s .15s both}
+.hero p{animation:up 1s .4s both}
+.hero .btn{animation:up 1s .65s both}
+.hero .btn.ghost{animation-delay:.8s}
+.tide{animation:up 1s .9s both,bob 7s 2s ease-in-out infinite;backdrop-filter:blur(6px)}
+.waves{height:80px}
+.w1{animation:sw 18s linear infinite}.w2{animation:sw 30s linear infinite}
+@keyframes sw{to{transform:translateX(-1200px)}}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--brass),#e6c987);z-index:50}
+header{transition:box-shadow .3s,background .3s}
+header.sc{box-shadow:0 6px 24px #0b2a3055;background:#0b2a30f2;backdrop-filter:blur(8px)}
+nav ul a{position:relative;padding:4px 0}
+nav ul a::after{content:"";position:absolute;left:0;bottom:-2px;height:2px;width:0;background:var(--brass);transition:width .3s}
+nav ul a:hover::after,nav ul a.on::after{width:100%}
+nav ul a.on{color:#fff}
+.logo svg{transition:transform .8s}.logo:hover svg{transform:rotate(360deg)}
+.btn{position:relative;overflow:hidden;transition:background .25s,transform .25s,box-shadow .25s}
+.btn::after{content:"";position:absolute;top:0;left:-70%;width:50%;height:100%;background:linear-gradient(100deg,transparent,#ffffff55,transparent);transform:skewX(-20deg);transition:left .6s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px #0b2a3040}.btn:hover::after{left:130%}
+section h2::after{content:"";display:block;width:64px;height:3px;background:var(--brass);margin-top:12px;transition:width .9s .3s}
+section h2.rv:not(.in)::after{width:0}
+.rv{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.room,.pkg,blockquote,.info div{transition:transform .35s,box-shadow .35s,background .35s}
+.room:hover,.pkg:hover,blockquote:hover{transform:translateY(-8px);box-shadow:0 22px 40px #0b2a3026}
+.info div:hover{background:var(--mist)}
+.pic{transition:filter .4s}.room:hover .pic{filter:saturate(1.2) brightness(1.05)}
+.gal figure{cursor:zoom-in;transition:transform .45s,box-shadow .45s,z-index 0s}
+.gal figure:hover{transform:scale(1.04);box-shadow:0 18px 40px #0b2a3055;z-index:2}
+.gal figcaption{transform:translateY(100%);opacity:0;transition:.4s}
+.gal figure:hover figcaption,.gal figure:focus-visible figcaption{transform:none;opacity:1}
+@media(hover:none){.gal figcaption{transform:none;opacity:1}}
+.promo{animation:pulse 3.5s ease-in-out infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 8px #a9823a22}}
+details{transition:background .3s}details[open]{background:#ffffff80}
+details p{animation:up .5s both}
+#lb{position:fixed;inset:0;z-index:100;background:#071b1fee;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;opacity:0;pointer-events:none;transition:opacity .35s;cursor:zoom-out;padding:20px}
+#lb.on{opacity:1;pointer-events:auto}
+#lb img{max-width:92vw;max-height:78vh;box-shadow:0 20px 60px #000;transform:scale(.92);transition:transform .45s}
+#lb.on img{transform:none}
+#lb p{color:#e6c987;font-family:'Cormorant Garamond',serif;font-size:1.4rem}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -160,7 +211,7 @@ footer a{color:#cfe0dc;display:block;margin:4px 0}
    <dl><dt>Rooms</dt><dd>24, from ₱3,800 a night</dd><dt>Beach</dt><dd>40 m from every room</dd><dt>Check-in</dt><dd>2:00 PM; check-out 11:00 AM</dd><dt>Best months</dt><dd>November to May</dd><dt>Reply time</dt><dd>Within 24 hours</dd></dl>
   </aside>
  </div>
- <svg class="waves" viewBox="0 0 1200 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 35c150-40 300 40 450 0s300-40 450 0 200 30 300 10v25H0z" fill="#f8faf9"/></svg>
+ <svg class="waves" viewBox="0 0 1200 70" preserveAspectRatio="none" aria-hidden="true"><path class="w2" d="M0 30C200 55 400 55 600 30S1000 5 1200 30S1600 55 1800 30S2200 5 2400 30V70H0Z" fill="#f8faf9" fill-opacity=".45"/><path class="w1" d="M0 40C200 10 400 10 600 40S1000 70 1200 40S1600 10 1800 40S2200 70 2400 40V70H0Z" fill="#f8faf9"/></svg>
 </section>
 
 <section id="about"><div class="wrap about">
@@ -243,7 +294,7 @@ footer a{color:#cfe0dc;display:block;margin:4px 0}
   <figure style="background-image:url(Gallery/gallery-7.jpg),linear-gradient(135deg,#2d8a8a,#a9823a)"><figcaption>Snorkeling over coral gardens</figcaption></figure>
   <figure style="background-image:url(Gallery/gallery-8.jpg),linear-gradient(135deg,#7fb9b0,#14575f)"><figcaption>Open-air restaurant</figcaption></figure>
  </div>
- <p class="credit">Credits to the photgraphers.</p>
+ <p class="credit">Credits to the photographers.</p>
 </div></section>
 
 <section id="destination"><div class="wrap dest">
@@ -285,7 +336,7 @@ footer a{color:#cfe0dc;display:block;margin:4px 0}
 
 <section id="reviews"><div class="wrap">
  <h2>What guests say</h2>
- <p class="lead">Sample guest comments for this academic project.</p>
+ <p class="lead">Guest Comments.</p>
  <div class="rev">
   <blockquote><span class="stars" aria-label="5 out of 5">★★★★★</span><p>Quiet beach, clean rooms and a very kind team. The sunset dinner was the highlight of our anniversary.</p><cite>Maria and Paolo, Quezon City</cite></blockquote>
   <blockquote><span class="stars" aria-label="5 out of 5">★★★★★</span><p>Our kids loved the boat trip and the staff watched them like family. Great value for a villa this size.</p><cite>The Reyes family, Batangas</cite></blockquote>
@@ -315,7 +366,7 @@ footer a{color:#cfe0dc;display:block;margin:4px 0}
   <div class="full"><button class="btn" type="submit">Send inquiry</button></div>
  </form>
  <div id="ok" role="status"></div>
- <p class="note" style="margin-top:16px">Your inquiry opens in your email app addressed to the resort. This is a fictional business for a class project.</p>
+ <p class="note" style="margin-top:16px">Your inquiry opens in your email app addressed to the resort.</p>
 </div></section>
 
 <section id="contact"><div class="wrap contact">
@@ -324,7 +375,7 @@ footer a{color:#cfe0dc;display:block;margin:4px 0}
   <p class="lead">Questions before you book? Reach the front desk through any channel below.</p>
   <p><b>Cedrick's Resort</b></p>
   <p>Sabang–Balatero Road, Puerto Galera, Oriental Mindoro 5203</p>
-  <p>Phone: <a href="tel:+63 950 816 6721">+63 950 816 6721</a></p>
+  <p>Phone: <a href="tel:+639508166721">+63 950 816 6721</a></p>
   <p>Email: <a href="mailto:cedrickmaderazo657@gmail.com">cedrickmaderazo657@gmail.com</a></p>
   <p>Front desk hours: 6:00 AM to 10:00 PM daily</p>
   <p>Follow us: <a href="https://www.facebook.com/CEDRICKMADERAZO.22" rel="noopener">Facebook</a> · <a href="https://instagram.com" rel="noopener">Instagram</a> · <a href="https://tiktok.com" rel="noopener">TikTok</a></p>
@@ -343,7 +394,7 @@ footer a{color:#cfe0dc;display:block;margin:4px 0}
 
 <footer><div class="wrap">
  <div class="fg">
-  <div><h3>Cedrick's Resort</h3><p>Beachfront stays, island tours and diving in Puerto Galera, Oriental Mindoro.</p><p>stay@cedricksresort.example<br>+63 917 555 0142</p></div>
+  <div><h3>Cedrick's Resort</h3><p>Beachfront stays, island tours and diving in Puerto Galera, Oriental Mindoro.</p><p>cedrickmaderazo657@gmail.com<br>+63 950 816 6721</p></div>
   <div><h3>Explore</h3><a href="#home">Home</a><a href="#rooms">Rooms &amp; Services</a><a href="#packages">Packages</a><a href="#gallery">Gallery</a><a href="#guide">Travel guide</a><a href="#booking">Book now</a></div>
   <div><h3>Follow</h3><a href="https://www.facebook.com/CEDRICKMADERAZO.22" rel="noopener">Facebook</a><a href="https://instagram.com" rel="noopener">Instagram</a><a href="https://tiktok.com" rel="noopener">TikTok</a></div>
  </div>
@@ -370,6 +421,30 @@ document.getElementById('msgform').addEventListener('submit',e=>{
  e.preventDefault();
  location.href=`mailto:${MAIL}?subject=${encodeURIComponent('Message from '+cn.value)}&body=${encodeURIComponent(cm.value+'\n\nReply to: '+ce.value)}`;
 });
+
+(()=>{
+const bar=document.createElement('div');bar.id='bar';document.body.appendChild(bar);
+const hd=document.querySelector('header');
+addEventListener('scroll',()=>{const h=document.documentElement;bar.style.width=(scrollY/(h.scrollHeight-innerHeight)*100)+'%';hd.classList.toggle('sc',scrollY>20)},{passive:true});
+const els=[...document.querySelectorAll('.about>*,.room,.pkg,.promo,.gal figure,.dest>*,.info>div,blockquote,details,.contact>*,section h2,section .lead,.tw,.mv>div')];
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+els.filter(el=>!els.some(o=>o!==el&&o.contains(el))).forEach(el=>{
+ el.classList.add('rv');el.style.transitionDelay=([...el.parentNode.children].indexOf(el)%4)*110+'ms';
+ el.addEventListener('transitionend',ev=>{if(ev.target===el&&ev.propertyName==='transform'){el.classList.remove('rv');el.style.transitionDelay=''}});
+ io.observe(el)});
+const navs=[...document.querySelectorAll('nav ul a')];
+const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)navs.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-45% 0px -50% 0px'});
+document.querySelectorAll('main section[id]').forEach(x=>so.observe(x));
+const lb=document.createElement('div');lb.id='lb';lb.innerHTML='<img alt=""><p></p>';document.body.appendChild(lb);
+document.querySelectorAll('.gal figure').forEach(f=>{
+ const m=f.style.backgroundImage.match(/url\(["']?([^"')]+)/);if(!m)return;
+ f.tabIndex=0;f.setAttribute('role','button');f.setAttribute('aria-label','Enlarge photo: '+f.textContent.trim());
+ const open=()=>{const i=lb.querySelector('img');i.onload=()=>lb.classList.add('on');i.alt=f.textContent.trim();lb.querySelector('p').textContent=i.alt;i.src=m[1]};
+ f.addEventListener('click',open);f.addEventListener('keydown',e=>{if(e.key==='Enter')open()});
+});
+lb.addEventListener('click',()=>lb.classList.remove('on'));
+addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+})();
 </script>
 </body>
 </html>
